@@ -215,9 +215,186 @@ img {
   }
 }
 
-
 /* SEGURIDAD */
+.seguridad {
+  background-color: var(--primario);
+  position: relative;
+  padding: 20rem 0;
+  overflow: hidden;
+}
+.seguridad::before,
+.seguridad::after {
+  background-color: var(--blanco);
+  content: "";
+  height: 20rem;
+  width: 130%;
+  position: absolute;
+}
+.seguridad::before {
+  top: -10rem;
+  left: 0;
+  transform: rotate(3deg);
+}
+.seguridad::after {
+  bottom: -10rem;
+  left: -2rem;
+  transform: rotate(3deg);
+}
 
-.seguridad{
+.seguridad__titulo {
+  text-align: center;
+  color: var(--blanco);
+}
+@media (min-width: 768px) {
+  .seguridad__contenido {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 4rem;
+    align-items: center;
+  }
+}
+
+.seguridad__opcion {
+  background-color: var(--blanco);
+  box-shadow: 0px 0px 15px 3px rgb(0 0 0 / 0.15);
+  padding: 1.5rem;
+  margin-bottom: 3rem;
+}
+.seguridad__opcion:hover {
+  transform: scale(1.1);
+  transition: all ease-in-out 300ms;
+}
+
+/* COMISIONES */
+
+.comisiones__titulo{
+    text-align: center;
+    font-size: 4rem;
+    margin-bottom: 4rem;
+}
+
+.comisiones__texto{
+    font-weight: 900;
+    text-align: center;
+}
+
+.comisiones__opcion{
+    background-color: var(--blanco);
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / 0.15);
+    padding: 2.5rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+.comisiones__opcion:hover{
+    transform: scale(1.1);
+    transition: all ease-in 300ms;
+}
+.comisiones__porcentaje{
+    color: var(--primario);
+    font-weight: 900;
+    font-size: 3rem;
+    margin: 0;
+}
+@media (min-width: 768px) { 
+    .comisiones__contenido{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: flex-end;
+    }
+}
+@media (min-width: 768px) { 
+    .comisiones__texto{
+        display: flex;
+        align-items: end;
+    }
+}
+@media (min-width: 768px) { 
+    .comisiones__opciones{
+        grid-row: 2/3;
+        margin: auto;
+    }
+}
+@media (min-width: 768px) { 
+    .comisiones__imagen{
+        grid-column: 2/3;
+        grid-row: 1/3;
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+/* TESTIMONIOS */
+
+.testimonios{
     background-color: var(--primario);
+    color: var(--blanco);
+}
+.testimonios__titulo{
+    margin: 0;
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.testimonios__comentario{
+    background-color: var(--blanco);
+    box-shadow: 0px 0px 15px 3px rgb(0 0 0 / 0.15);
+    padding: 1.5rem;
+    margin-bottom: 3rem;
+    color: var(--negro);
+}
+.testimonios__comentario:last-child{
+    margin: 0;
+}
+.testimonios__descripcion::before{
+    content: '';
+    background-image: url(../img/comilla.png);
+    background-size: cover;
+    width: 2rem;
+    display: inline-block;
+    height: 2rem;
+    margin-right: 1rem;
+}
+.testimonios__autor{
+    text-align: end;
+    color: var(--primario);
+    font-weight: 900;
+}
+.testimonios__autor::before{
+    content: '- ';
+}
+
+@media (min-width: 768px) { 
+    .testimonios__listado{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4rem;
+    }
+    .testimonios__comentario{
+        margin: 0;
+    }
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: #4c099e;
+    padding: 2rem 0;
+}
+.footer__titulo{
+    margin: 2rem 0;
+    color: var(--blanco);
+    text-align: center;
+}
+.footer .navegacion__link{
+    color: var(--blanco);
+}
+@media (min-width: 768px) { 
+    .footer__contenido{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding: 0 3rem;
+    }
 }
